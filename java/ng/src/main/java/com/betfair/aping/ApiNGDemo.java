@@ -13,6 +13,7 @@ import java.util.Properties;
  * runner</li> <li>handle the error</li>
  *
  */
+
 public class ApiNGDemo {
 
     private static Properties prop = new Properties();
@@ -34,7 +35,7 @@ public class ApiNGDemo {
             System.out.println("Error loading the properties file: "+e.toString());
         }
     }
-
+*
     public static void main(String[] args) {
 
         System.out.println("Welcome to the Betfair API NG!");
