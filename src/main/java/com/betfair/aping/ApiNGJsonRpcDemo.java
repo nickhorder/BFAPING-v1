@@ -140,7 +140,8 @@ public class ApiNGJsonRpcDemo {
 
                 String customerRef = "1";
 
-                PlaceExecutionReport placeBetResult = jsonOperations.placeOrders(marketIdChosen, instructions, customerRef, applicationKey, sessionToken);
+                PlaceExecutionReport placeBetResult = jsonOperations.placeOrders(marketIdChosen,
+                        instructions, customerRef, applicationKey, sessionToken);
 
                 // Handling the operation result
                 if (placeBetResult.getStatus() == ExecutionReportStatus.SUCCESS) {
@@ -162,20 +163,27 @@ public class ApiNGJsonRpcDemo {
     private static double getPrice() {
 
         try {
-            return new Double((String) ApiNGDemo.getProp().get("BET_PRICE"));
+            Double d = Double.valueOf((String) ApiNGDemo.getProp().get("BET_PRICE"));
+            return d;
         } catch (NumberFormatException e) {
             //returning the default value
-            return new Double(1000);
+           // return new Double(1000);
+            Double def = 1000d;
+            return def;
         }
 
     }
 
     private static double getSize(){
         try{
-            return new Double((String)ApiNGDemo.getProp().get("BET_SIZE"));
+         //   return new Double((String)ApiNGDemo.getProp().get("BET_SIZE"));
+            Double d = Double.valueOf((String) ApiNGDemo.getProp().get("BET_SIZE"));
+            return d;
         } catch (NumberFormatException e){
             //returning the default value
-            return new Double(0.01);
+            Double def = 0.01d;
+            return def;
+      //      return new Double(0.01);
         }
     }
 

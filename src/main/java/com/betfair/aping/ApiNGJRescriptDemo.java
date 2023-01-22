@@ -92,7 +92,7 @@ public class ApiNGJRescriptDemo {
             priceData.add(PriceData.EX_BEST_OFFERS);
             priceProjection.setPriceData(priceData);
 
-            //In this case we don't need these objects so they are declared null
+            //In this case we don't need these objects, so they are declared null
             OrderProjection orderProjection = null;
             MatchProjection matchProjection = null;
             String currencyCode = null;
@@ -147,7 +147,7 @@ public class ApiNGJRescriptDemo {
                     System.out.println("Your bet has been placed!!");
                     System.out.println(placeBetResult.getInstructionReports());
                 } else if (placeBetResult.getStatus() == ExecutionReportStatus.FAILURE) {
-                    System.out.println("Your bet has NOT been placed :*( ");
+                    System.out.println("Your bet has NOT been placed.");
                     System.out.println("The error is: " + placeBetResult.getErrorCode() + ": " + placeBetResult.getErrorCode().getMessage());
                 }
             } else {
@@ -162,20 +162,27 @@ public class ApiNGJRescriptDemo {
     private static double getPrice() {
 
         try {
-            return new Double((String) ApiNGDemo.getProp().get("BET_PRICE"));
+        //    return new Double((String) ApiNGDemo.getProp().get("BET_PRICE"));
+              Double d = Double.valueOf((String) ApiNGDemo.getProp().get("BET_PRICE"));
+              return d;
         } catch (NumberFormatException e) {
             //returning the default value
-            return new Double(1000);
+            Double def = 1000d;
+            return def;
         }
 
     }
 
     private static double getSize(){
         try{
-            return new Double((String)ApiNGDemo.getProp().get("BET_SIZE"));
+            // return new Double((String)ApiNGDemo.getProp().get("BET_SIZE"));
+            Double d = Double.valueOf((String) ApiNGDemo.getProp().get("BET_SIZE"));
+            return d;
         } catch (NumberFormatException e){
             //returning the default value
-            return new Double(0.01);
+            // return new Double(0.01);
+            Double def = 0.01d;
+            return def;
         }
     }
 

@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Properties;
-
 /**
  * This is a demonstration class to show a quick demo of the new Betfair API-NG.
  * When you execute the class will: <li>find a market (next horse race in the
@@ -29,13 +28,14 @@ public class ApiNGDemo {
             prop.load(in);
             in.close();
 
-            debug = new Boolean(prop.getProperty("DEBUG"));
+             debug = Boolean.parseBoolean(prop.getProperty("DEBUG"));
 
         } catch (IOException e) {
-            System.out.println("Error loading the properties file: "+e.toString());
+            System.out.println("Error loading the properties file: " + e);
         }
     }
-*
+
+
     public static void main(String[] args) {
 
         System.out.println("Welcome to the Betfair API NG!");
@@ -80,7 +80,7 @@ public class ApiNGDemo {
             }
         }
 
-        //Ask the user what protocol want to use for the test
+        //Ask the user what protocol they want to use for the test
         while (jsonRpcRequest == null) {
             System.out.println("Please choose the protocol to run the test: ");
             System.out.println("1 json-rpc");
@@ -90,7 +90,8 @@ public class ApiNGDemo {
             inputStreamReader = new BufferedReader(new InputStreamReader(System.in));
             try {
                 jsonOrRescript = inputStreamReader.readLine();
-                Integer input = new Integer(jsonOrRescript);
+
+                    int input = Integer.parseInt(jsonOrRescript);
 
                 if (input == 1)
                     jsonRpcRequest = true;

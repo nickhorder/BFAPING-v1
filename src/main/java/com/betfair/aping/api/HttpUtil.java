@@ -46,8 +46,8 @@ public class HttpUtil {
             HttpClient httpClient = new DefaultHttpClient();
 
             HttpParams httpParams = httpClient.getParams();
-            HttpConnectionParams.setConnectionTimeout(httpParams, new Integer(ApiNGDemo.getProp().getProperty("TIMEOUT")).intValue());
-            HttpConnectionParams.setSoTimeout(httpParams, new Integer(ApiNGDemo.getProp().getProperty("TIMEOUT")).intValue());
+            HttpConnectionParams.setConnectionTimeout(httpParams, Integer.parseInt(ApiNGDemo.getProp().getProperty("TIMEOUT")));
+            HttpConnectionParams.setSoTimeout(httpParams, Integer.parseInt(ApiNGDemo.getProp().getProperty("TIMEOUT")));
 
             resp = httpClient.execute(post, reqHandler);
 

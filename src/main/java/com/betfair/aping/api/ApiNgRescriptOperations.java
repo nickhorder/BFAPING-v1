@@ -27,7 +27,7 @@ public class ApiNgRescriptOperations extends ApiNgOperations {
     }
 
     public List<EventTypeResult> listEventTypes(MarketFilter filter, String appKey, String ssoId) throws APINGException {
-        Map<String, Object> params = new HashMap<String, Object>();
+        Map<String, Object> params = new HashMap<>();
         params.put(FILTER, filter);
         params.put(LOCALE, locale);
         String result = getInstance().makeRequest(ApiNgOperation.LISTEVENTTYPES.getOperationName(), params, appKey, ssoId);
@@ -42,7 +42,7 @@ public class ApiNgRescriptOperations extends ApiNgOperations {
 
     public List<MarketBook> listMarketBook(List<String> marketIds, PriceProjection priceProjection, OrderProjection orderProjection,
                                            MatchProjection matchProjection, String currencyCode, String appKey, String ssoId) throws APINGException {
-        Map<String, Object> params = new HashMap<String, Object>();
+        Map<String, Object> params = new HashMap<>();
         params.put(LOCALE, locale);
         params.put(MARKET_IDS, marketIds);
         params.put(PRICE_PROJECTION, priceProjection);
@@ -60,7 +60,7 @@ public class ApiNgRescriptOperations extends ApiNgOperations {
 
     public List<MarketCatalogue> listMarketCatalogue(MarketFilter filter, Set<MarketProjection> marketProjection,
                                                      MarketSort sort, String maxResult, String appKey, String ssoId) throws APINGException {
-        Map<String, Object> params = new HashMap<String, Object>();
+        Map<String, Object> params = new HashMap<>();
         params.put(LOCALE, locale);
         params.put(FILTER, filter);
         params.put(SORT, sort);
@@ -77,7 +77,7 @@ public class ApiNgRescriptOperations extends ApiNgOperations {
     }
 
     public PlaceExecutionReport placeOrders(String marketId, List<PlaceInstruction> instructions, String customerRef , String appKey, String ssoId) throws APINGException {
-        Map<String, Object> params = new HashMap<String, Object>();
+        Map<String, Object> params = new HashMap<>();
         params.put(LOCALE, locale);
         params.put(MARKET_ID, marketId);
         params.put(INSTRUCTIONS, instructions);
