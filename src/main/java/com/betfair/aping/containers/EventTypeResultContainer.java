@@ -1,6 +1,6 @@
 package com.betfair.aping.containers;
 
-import com.betfair.aping.entities.EventTypeResult;
+import com.betfair.aping.api.EventTypeResult;
 
 import java.util.List;
 

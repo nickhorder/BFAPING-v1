@@ -4,24 +4,24 @@ import java.util.Date;
 
 public class TimeRange {
 
-	private Date from;
 
-	public final Date getFrom() {
-		return from;
-	}
+    private Date from;
 
-	public final void setFrom(Date from) {
-		this.from = from;
-	}
+    public final Date getFrom() {
+        return from;
+    }
 
-	private Date to;
+    public final void setFrom(Date from) {
+        this.from = from;
+    }
 
-	public final Date getTo() {
-		return to;
-	}
+    private Date to;
 
-	public final void setTo(Date to) {
-		this.to = to;
-	}
+    public final Date getTo() {
+        return to;
+    }
 
+    public final void setTo(Date to) {
+        this.to = to;
+    }
 }

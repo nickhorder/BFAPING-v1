@@ -1,5 +1,4 @@
 package com.betfair.aping.entities;
-
 public class PriceSize {
 	private Double price;
 	private Double size;
@@ -20,4 +19,8 @@ public class PriceSize {
 		this.size = size;
 	}
 
+	public String toString() {
+		return     "price=" + getPrice() + "\n"
+				   + "size=" + getSize() + "\n";
+	}
 }

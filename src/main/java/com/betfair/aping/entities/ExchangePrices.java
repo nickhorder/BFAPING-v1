@@ -1,5 +1,4 @@
 package com.betfair.aping.entities;
-
 import java.util.List;
 
 public class ExchangePrices {
@@ -33,9 +32,9 @@ public class ExchangePrices {
 	}
 
 	public String toString() {
-		return "{" + "" + "availableToBack=" + getAvailableToBack() + ","
-				+ "availableToLay=" + getAvailableToLay() + ","
-				+ "tradedVolume=" + getTradedVolume() + "," + "}";
+		return  " availableToBack=" + getAvailableToBack() + "\n"
+			 	+ "availableToLay=" + getAvailableToLay() + "\n"
+				+ "tradedVolume=" + getTradedVolume() + "\n";
 	}
 
 }

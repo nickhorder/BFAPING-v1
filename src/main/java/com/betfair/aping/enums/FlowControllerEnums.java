@@ -1,6 +1,6 @@
 package com.betfair.aping.enums;
 
-public enum ApiNgOperation {
+public enum FlowControllerEnums {
 	LISTEVENTTYPES("listEventTypes"), 
 	LISTCOMPETITIONS("listCompetitions"),
 	LISTTIMERANGES("listTimeRanges"),
@@ -14,7 +14,7 @@ public enum ApiNgOperation {
 	
 	private String operationName;
 	
-	private ApiNgOperation(String operationName){
+	private FlowControllerEnums(String operationName){
 		this.operationName = operationName;
 	}
 

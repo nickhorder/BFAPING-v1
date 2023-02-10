@@ -3,6 +3,7 @@ package com.betfair.aping.entities;
 import com.betfair.aping.enums.MarketBettingType;
 import com.betfair.aping.enums.OrderStatus;
 
+import java.time.LocalDate;
 import java.util.Set;
 
 
@@ -22,6 +23,7 @@ public class MarketFilter {
 	private Set<String> marketCountries;
 	private Set<String> marketTypeCodes;
 	private TimeRange marketStartTime;
+	//private TimeRange marketStartTime;
 	private Set<OrderStatus> withOrders;
 
 	public String getTextQuery() {
@@ -131,10 +133,17 @@ public class MarketFilter {
 	public TimeRange getMarketStartTime() {
 		return marketStartTime;
 	}
+	//public TimeRange getMarketStartTime() {
+	//		return marketStartTime;
+	//	}
 
 	public void setMarketStartTime(TimeRange marketStartTime) {
 		this.marketStartTime = marketStartTime;
 	}
+	//public void setMarketStartTime(TimeRange marketStartTime) {
+	//	this.marketStartTime = marketStartTime;
+//	}
+
 
 	public Set<OrderStatus> getWithOrders() {
 		return withOrders;

@@ -1,17 +1,17 @@
 package com.betfair.aping.containers;
 
 
-import com.betfair.aping.entities.PlaceExecutionReport;
-
+//import com.betfair.aping.entities.PlaceExecutionReport;
+import com.betfair.aping.api.InstructionAndExecution;
 public class PlaceOrdersContainer extends Container {
 
-	private PlaceExecutionReport result;
+	private InstructionAndExecution result;
 	
-	public PlaceExecutionReport getResult() {
+	public InstructionAndExecution getResult() {
 		return result;
 	}
 	
-	public void setResult(PlaceExecutionReport result) {
+	public void setResult(InstructionAndExecution result) {
 		this.result = result;
 	}
 

@@ -1,6 +1,6 @@
 package com.betfair.aping.containers;
 
-import com.betfair.aping.entities.MarketBook;
+import com.betfair.aping.api.MarketBook;
 
 import java.util.List;
 

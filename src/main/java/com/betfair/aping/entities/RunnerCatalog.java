@@ -31,9 +31,9 @@ public class RunnerCatalog {
 	}
 
 	public String toString() {
-		return "{" + "" + "selectionId=" + getSelectionId() + ","
-				+ "runnerName=" + getRunnerName() + "," + "handicap="
-				+ getHandicap() + "," + "}";
+		return  "selectionId=" + getSelectionId() + "\n"
+				+ "runnerName=" + getRunnerName() + "\n"
+				+ "handicap=" + getHandicap() + "\n";
 	}
 
 }
